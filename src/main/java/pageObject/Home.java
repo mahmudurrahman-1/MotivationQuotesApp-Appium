@@ -1,6 +1,9 @@
 package pageObject;
 
 import driver.PageDriver;
+import io.appium.java_client.MobileBy;
+import org.openqa.selenium.InvalidSelectorException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -18,8 +21,6 @@ public class Home extends Common {
      */
     @FindBy(className = "android.widget.Button")
     List<WebElement> skipButton;
-    @FindBy(className = "android.widget.ScrollView")
-    WebElement categoryScroll;
 
     //Strings
     String scrollCategory = "android.widget.ScrollView";
@@ -48,8 +49,15 @@ public class Home extends Common {
 
     //exploring natures
     public void exploreNatures() {
-        verticalScroll(categoryScroll, 100);
-        verticalScroll(categoryScroll, 100);
-        androidScrollToAnElementByText(textNature);
+        androidVerticalScrollToTextByclassName(scrollCategory,textNature);
+
+    }
+    // find img quotes by text
+    public void findNothingQuotes() throws InterruptedException{
+        Thread.sleep(5000);
+
+        skipButton.get(0).click();
+
+        androidScrollToAnElementByText("+11.2k");
     }
 }

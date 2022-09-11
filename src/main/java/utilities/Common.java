@@ -5,6 +5,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import io.appium.java_client.MobileBy;
+import org.openqa.selenium.InvalidSelectorException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
@@ -102,6 +103,35 @@ public class Common {
             throw new NoSuchElementException("No element" + e);
         }
     }
+
+    /***************************************
+     * *************************************
+     * This method-----Forward Scroll
+     */
+    public void androidScrollForward(){
+        try {
+            PageDriver.getCurrentDriver().findElement(MobileBy.AndroidUIAutomator(
+                    "new UiScrollable(new UiSelector().scrollable(true)).scrollForward()"));
+        } catch (InvalidSelectorException e) {
+            // ignore
+        }
+    }
+    /***************************************
+     * *************************************
+     * This method-----Scroll by class name
+     * @param className
+     * @param text
+     * (must be scrollable and text as a string----call the method passing arguements those are stored in the variable
+     */
+    public void androidVerticalScrollToTextByclassName(String className,String text){
+        try {
+            (PageDriver.getCurrentDriver()).findElement(
+                    MobileBy.AndroidUIAutomator(
+                            "new UiScrollable(new UiSelector().scrollable(true)." + "className(\""+ className +"\").instance(1))" + ".scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))")).click();
+        } catch (Exception e) {
+            throw new NoSuchElementException("No element" + e);
+        }
+    }
     /***************************************
      * *************************************
      * This method-----1 stands for left right scrolling
@@ -150,7 +180,7 @@ public class Common {
     public void androidHorizontalScrollByText(String id,String text) {
         try {
             (PageDriver.getCurrentDriver()).findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)."
-                    + "resourceId(\""+id+"\"))" + ".setAsHorizontalList().scrollIntoView(new UiSelector().text(\""+text+"\"))")); }
+                    + "resourceId(\""+id+"\"))" + ".setAsHorizontalList().scrollIntoView(new UiSelector().text(\""+text+"\"))")).click(); }
         catch (Exception e) {
             throw new NoSuchElementException("No element" + e);
         }

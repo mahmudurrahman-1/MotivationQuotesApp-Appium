@@ -10,7 +10,7 @@ public class DemoTest {
     String textMotive ="Motivational Quotes";
     String textExplore="Explore";
     String textNature="Nature";
-
+    String textImgQuotes ="Nothing Better....";
     @Given("^Sultan on home page after opening \"([^\"]*)\" mobile app$")
     public void OpenHomePage(String text) throws InterruptedException{
         if(text.equals(textMotive)) {
@@ -34,5 +34,13 @@ public class DemoTest {
         if(text.equals(textNature)) {
             homePage.exploreNatures();
         }
+
+    }
+    @And("^Sultan goes \"([^\"]*)\" image$")
+    public void findQuotes(String text) throws InterruptedException{
+        Thread.sleep(3000);
+    if (text.equals(textImgQuotes)){
+        homePage.findNothingQuotes();
+    }
     }
 }

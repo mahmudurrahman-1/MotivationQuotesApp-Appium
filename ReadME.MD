@@ -14,7 +14,7 @@
 > **_Given:_** Sultan on home page after opening "Motivational Quotes mobile" app  
 > **_When:_** Sultan click "Explore" from top list from home page  
 > **_And:_** Sultan go to "Self Love" from Explore Page 
-> **_And:_** Sultan Select "Nobody is ever" image quotes from Self Love category
+> **_And:_** Sultan Select "Nobody is ever" image quotes from Self Love category  
 > **_Then:_** Sultan click "Download"
 
 

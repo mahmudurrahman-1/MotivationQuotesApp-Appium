@@ -2,6 +2,7 @@ package step_definition;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObject.Home;
 
@@ -11,6 +12,9 @@ public class DemoTest {
     String textExplore="Explore";
     String textNature="Nature";
     String textImgQuotes ="Nothing Better....";
+    String likebtn = "Like";
+    String savebtn="Save";
+    String dload ="Download";
     @Given("^Sultan on home page after opening \"([^\"]*)\" mobile app$")
     public void OpenHomePage(String text) throws InterruptedException{
         if(text.equals(textMotive)) {
@@ -42,5 +46,11 @@ public class DemoTest {
     if (text.equals(textImgQuotes)){
         homePage.findNothingQuotes();
     }
+    }
+    @Then("^Sultan click \"([^\"]*)\" icon, \"([^\"]*)\" button , and click \"([^\"]*)\"$")
+    public void Finished(String like,String save,String download) throws InterruptedException{
+        if(like.equals(likebtn) && save.equals(savebtn) && download.equals(dload)){
+        homePage.finaOperation();
+        }
     }
 }

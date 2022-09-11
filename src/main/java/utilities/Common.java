@@ -82,7 +82,7 @@ public class Common {
         try {
             (PageDriver.getCurrentDriver()).findElement(
                     MobileBy.AndroidUIAutomator(
-                            "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))")).click();
+                            "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))"));
         } catch (Exception e) {
             throw new NoSuchElementException("No element" + e);
         }

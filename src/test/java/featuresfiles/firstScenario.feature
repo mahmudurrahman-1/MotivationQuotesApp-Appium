@@ -4,4 +4,4 @@ Feature: test
     When Sultan click "Explore" from top list from home page
     And Sultan click to "Nature" from categories
     And Sultan goes "Nothing Better...." image
- # Then Sultan click "Like" icon, "Save" button , and click "Download"
+  Then Sultan click "Like" icon, "Save" button , and click "Download"

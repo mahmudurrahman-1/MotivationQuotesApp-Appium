@@ -20,7 +20,8 @@ public class Home extends Common {
      * Locators
      */
     @FindBy(className = "android.widget.Button")
-    List<WebElement> skipButton;
+    List<WebElement> button;
+
 
     //Strings
     String scrollCategory = "android.widget.ScrollView";
@@ -33,18 +34,18 @@ public class Home extends Common {
     //skips first popup
     public void firstSkip() {
 
-        skipButton.get(1).click();
+        button.get(1).click();
     }
 
     //skips second popup
     public void secondSkip() {
-        skipButton.get(0).click();
+        button.get(0).click();
     }
 
     //selects explore
     public void selectExplore() {
 
-        skipButton.get(0).click();
+        button.get(0).click();
     }
 
     //exploring natures
@@ -54,10 +55,23 @@ public class Home extends Common {
     }
     // find img quotes by text
     public void findNothingQuotes() throws InterruptedException{
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
-        skipButton.get(0).click();
+        button.get(0).click();
 
         androidScrollToAnElementByText("+11.2k");
+    }
+    // like save and download
+    public void finaOperation() throws InterruptedException{
+        String likebtn = "Like";
+        String savebtn="Save";
+        String dload ="Download";
+       System.out.println(button.size());
+        button.get(6).click();
+      Thread.sleep(3000);
+      button.get(7).click();
+        Thread.sleep(3000);
+        button.get(8).click();
+
     }
 }

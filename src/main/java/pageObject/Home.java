@@ -25,8 +25,9 @@ public class Home extends Common {
 
     //Strings
     String scrollCategory = "android.widget.ScrollView";
+    String horizontalContainer ="android.widget.HorizontalScrollView";
     String textNature = "Nature";
-
+    String textSelfLove = "Self Love";
 
     /***********
      * Actions
@@ -45,6 +46,20 @@ public class Home extends Common {
     //selects explore
     public void selectExplore() {
 
+        button.get(0).click();
+    }
+    //selects selfLove
+    public void selectSelfLove() {
+
+        androidHorizontalScrollToTextByclassName(horizontalContainer,textSelfLove);
+    }
+    //Explore self-love
+    public void exploreSelfLove() throws InterruptedException{
+
+        androidScrollToAnElementByText("+19.3k");
+    }
+    //download img
+    public void downLoadSelfLuvImg(){
         button.get(0).click();
     }
 

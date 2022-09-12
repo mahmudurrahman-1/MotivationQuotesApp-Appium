@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObject.Home;
 
-public class DemoTest {
+public class Explore_Test {
     Home homePage=new Home();
     String textMotive ="Motivational Quotes";
     String textExplore="Explore";
@@ -31,7 +31,7 @@ public class DemoTest {
             homePage.selectExplore();
         }    }
 
-   //select nature
+    //select nature
     @And("^Sultan click to \"([^\"]*)\" from categories$")
     public void findNature(String text) throws InterruptedException{
         Thread.sleep(3000);
@@ -43,14 +43,14 @@ public class DemoTest {
     @And("^Sultan goes \"([^\"]*)\" image$")
     public void findQuotes(String text) throws InterruptedException{
         Thread.sleep(3000);
-    if (text.equals(textImgQuotes)){
-        homePage.findNothingQuotes();
-    }
+        if (text.equals(textImgQuotes)){
+            homePage.findNothingQuotes();
+        }
     }
     @Then("^Sultan click \"([^\"]*)\" icon, \"([^\"]*)\" button , and click \"([^\"]*)\"$")
     public void Finished(String like,String save,String download) throws InterruptedException{
         if(like.equals(likebtn) && save.equals(savebtn) && download.equals(dload)){
-        homePage.finaOperation();
+            homePage.finaOperation();
         }
     }
 }

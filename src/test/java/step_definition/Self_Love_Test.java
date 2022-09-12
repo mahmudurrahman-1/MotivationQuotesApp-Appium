@@ -9,13 +9,14 @@ import pageObject.Home;
 public class Self_Love_Test {
     Home homePage=new Home();
     String textMotive ="Motivational Quotes";
-    String textExplore="Explore";
+    String textSelfLove="Self-Love";
     String textNature="Nature";
+    String liveLife="Live your life";
     String textImgQuotes ="Nothing Better....";
     String likebtn = "Like";
     String savebtn="Save";
     String dload ="Download";
-    @Given("^Sultan on home page after opening \"([^\"]*)\" app$")
+    @Given("^Sultan on home page after opening \"([^\"]*)\" mobile application$")
     public void OpenHomePage(String text) throws InterruptedException{
         if(text.equals(textMotive)) {
             homePage.firstSkip();
@@ -27,24 +28,24 @@ public class Self_Love_Test {
     //selects explore
     @When("^Sultan select \"([^\"]*)\" from top list from home page$")
     public void GotoExplore(String text){
-        if (text.equals(textExplore)) {
-            homePage.selectExplore();
+        if (text.equals(textSelfLove)) {
+            homePage.selectSelfLove();
         }    }
 
     //select nature
     @And("^Sultan enter self-love and select \"([^\"]*)\" image quotes from Self Love category$")
     public void findNature(String text) throws InterruptedException{
-        Thread.sleep(3000);
-        if(text.equals(textNature)) {
-            homePage.exploreNatures();
+       Thread.sleep(3000);
+        if(text.equals(liveLife)) {
+            homePage.exploreSelfLove();
         }
 
     }
-    @Then("^Sultan click \"([^\"]*)\"$")
-    public void findQuotes(String text) throws InterruptedException{
-        Thread.sleep(3000);
-        if (text.equals(textImgQuotes)){
-            homePage.findNothingQuotes();
-        }
-    }
+//    @Then("^Sultan click \"([^\"]*)\"$")
+//    public void findQuotes(String text) throws InterruptedException{
+//        Thread.sleep(3000);
+//        if (text.equals(textImgQuotes)){
+//            homePage.downLoadSelfLuvImg();
+//        }
+//    }
 }

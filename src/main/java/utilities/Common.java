@@ -179,9 +179,22 @@ public class Common {
      */
     public void androidHorizontalScrollByText(String id,String text) {
         try {
-            (PageDriver.getCurrentDriver()).findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)."
+            (PageDriver.getCurrentDriver()).findElement(
+                    MobileBy.AndroidUIAutomator(
+                            "new UiScrollable(new UiSelector().scrollable(true)."
                     + "resourceId(\""+id+"\"))" + ".setAsHorizontalList().scrollIntoView(new UiSelector().text(\""+text+"\"))")).click(); }
         catch (Exception e) {
+            throw new NoSuchElementException("No element" + e);
+        }
+    }
+
+    public void androidHorizontalScrollToTextByclassName(String className,String text){
+        try {
+            (PageDriver.getCurrentDriver()).findElement(
+                    MobileBy.AndroidUIAutomator(
+                            "new UiScrollable(new UiSelector().scrollable(true)."
+                    + "className(\""+ className +"\").instance(0))" + ".setAsHorizontalList().scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))")).click();
+        } catch (Exception e) {
             throw new NoSuchElementException("No element" + e);
         }
     }

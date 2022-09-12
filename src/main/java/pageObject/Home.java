@@ -54,9 +54,8 @@ public class Home extends Common {
         androidHorizontalScrollToTextByclassName(horizontalContainer,textSelfLove);
     }
     //Explore self-love
-    public void exploreSelfLove() throws InterruptedException{
-
-        androidScrollToAnElementByText("+19.3k");
+    public void exploreSelfLove() {
+     androidScrollToAnElementByText("+10.1k");
     }
     //download img
     public void downLoadSelfLuvImg(){

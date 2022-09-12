@@ -33,19 +33,19 @@ public class Self_Love_Test {
         }    }
 
     //select nature
-//    @And("^Sultan enter self-love and select \"([^\"]*)\" image quotes from Self Love category$")
-//    public void findNature(String text) throws InterruptedException{
-//       Thread.sleep(10000);
-//        if(text.equals(liveLife)) {
-//            homePage.exploreSelfLove();
-//        }
-//
-//    }
-//    @Then("^Sultan click \"([^\"]*)\"$")
-//    public void findQuotes(String text) throws InterruptedException{
-//        Thread.sleep(3000);
-//        if (text.equals(textImgQuotes)){
-//            homePage.downLoadSelfLuvImg();
-//        }
-//    }
+    @And("^Sultan enter self-love and select \"([^\"]*)\" image quotes from Self Love category$")
+    public void findNature(String text) throws InterruptedException{
+
+        if(text.equals(liveLife)) {
+            homePage.exploreSelfLove();
+        }
+
+    }
+    @Then("^Sultan click \"([^\"]*)\"$")
+    public void findQuotes(String text) throws InterruptedException{
+        Thread.sleep(3000);
+        if (text.equals(textImgQuotes)){
+            homePage.downLoadSelfLuvImg();
+        }
+    }
 }

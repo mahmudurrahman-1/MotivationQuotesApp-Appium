@@ -84,7 +84,7 @@ public class Common {
                     MobileBy.AndroidUIAutomator(
                             "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))"));
         } catch (Exception e) {
-            throw new NoSuchElementException("No element" + e);
+            throw new NoSuchElementException("No element " + e);
         }
     }
     /***************************************

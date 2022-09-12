@@ -59,7 +59,7 @@ public class Home extends Common {
 
         button.get(0).click();
 
-        androidScrollToAnElementByText("+11.2k");
+        androidScrollToAnElementByText("+13.8k");
     }
     // like save and download
     public void finaOperation() throws InterruptedException{

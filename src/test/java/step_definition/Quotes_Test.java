@@ -22,7 +22,6 @@ public class Quotes_Test {
     @And("^Sujon clicks on \"([^\"]*)\"$")
     public void test_step_2(String text) throws InterruptedException{
 
-
         if(text.equals(btn1)) {
             quotespage.SBE();
         }
@@ -31,5 +30,17 @@ public class Quotes_Test {
     @And("^Sujon start exercising and close it$")
     public void test_step_3(){
           quotespage.exercise();
+    }
+    @And("^Sujon goes to first image$")
+    public void test_step_4(){
+
+            quotespage.beYourself();
+
+    }
+    @And("^Sujon enters and he goes to third image$")
+    public void test_step_5() throws InterruptedException{
+        Thread.sleep(5000);
+        quotespage.imageSlide();
+
     }
 }

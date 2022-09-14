@@ -23,8 +23,9 @@ public class Quotes extends Common {
     WebElement scroll;
     String btn1 = "START BREATHING EXERCISE";
     @FindBy(className = "android.view.ViewGroup")
-    List<WebElement> close;
-    String textLove ="Searching for love is an endless journey. The love you seek is already endless inside you.";
+    List<WebElement> button;
+    String txt="Alone";
+    String textSituation ="+1.2k";
 //    @FindBy(className = "")
 //    WebElement ;
 //    @FindBy(className = "")
@@ -40,12 +41,24 @@ public class Quotes extends Common {
     }
     //scroll down and click SBE btn
     public void SBE() throws InterruptedException {
-
+        Thread.sleep(15000);
+        quotesTqo.get(0).click();
         androidScrollToAnElementByText(btn1);
-       quotesTqo.get(0).click();
+        Thread.sleep(10000);
+
     }
     //Sujon enter SBE and waits for some time then close it
      public void exercise(){
-        close.get(12).click();
+        button.get(12).click();
      }
+     //Sujon selects Be Yourself from trending topics
+    public void beYourself(){
+        androidScrollToAnElementByText(textSituation);
+    }
+    //Sujon enters the image container and start sliding
+    public void imageSlide(){
+        button.get(3).click();
+        button.get(3).click();
+        button.get(3).click();
+    }
 }

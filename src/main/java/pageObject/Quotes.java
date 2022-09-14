@@ -56,9 +56,12 @@ public class Quotes extends Common {
         androidScrollToAnElementByText(textSituation);
     }
     //Sujon enters the image container and start sliding
-    public void imageSlide(){
+    public void imageSlideafter(){
         button.get(3).click();
-        button.get(3).click();
-        button.get(3).click();
+
+    }
+    public void imageSlidebefore(){
+        button.get(2).click();
+
     }
 }

@@ -2,20 +2,29 @@
 
 ### write automation script to automate the below scenarios
 
-**Background: 01** Explore Quotes By Categories
+**Scenario: 01** Explore Quotes By Categories
 
 > **_Given:_** Sultan on home page after opening "Motivational Quotes mobile" app  
 > **_When:_** Sultan click "Explore" from top list from home page  
 > **_And:_** Sultan click to "Nature" from categories  
 > **_Then:_** Sultan click "Like" icon, "Save" button , and click "Download"
 
-**Scenario: 01** Explore Quotes By Categories
+**Scenario: 02** Explore Quotes By Categories
 
 > **_Given:_** Sultan on home page after opening "Motivational Quotes mobile" app  
 > **_When:_** Sultan click "Explore" from top list from home page  
 > **_And:_** Sultan go to "Self Love" from Explore Page 
 > **_And:_** Sultan Select "Nobody is ever" image quotes from Self Love category  
 > **_Then:_** Sultan click "Download"
+
+**Scenario: 03** Sujon selects the given image and perform actions
+
+> **_Given:_** Sujon opens the app and select Quotes      
+> **_And:_** Sujon clicks on "START BREATHING EXERCISE"      
+> **_And:_** Sujon start exercising and close it     
+> **_And:_** Sujon goes to first image       
+> **_When:_** Sujon enters and he goes to next image
+> > **_Then:_** Sujon slides 1 times before image
 
 
 ### Additional functionalities, that may be covered:

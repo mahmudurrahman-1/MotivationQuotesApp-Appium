@@ -37,10 +37,16 @@ public class Quotes_Test {
             quotespage.beYourself();
 
     }
-    @And("^Sujon enters and he goes to third image$")
+    @And("^Sujon enters and he goes to next image$")
     public void test_step_5() throws InterruptedException{
-        Thread.sleep(5000);
-        quotespage.imageSlide();
+        Thread.sleep(10000);
+        quotespage.imageSlideafter();
+
+    }
+    @And("^Sujon slides 1 times before image$")
+    public void test_step_6() throws InterruptedException{
+        Thread.sleep(2000);
+        quotespage.imageSlidebefore();
 
     }
 }

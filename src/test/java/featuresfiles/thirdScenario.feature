@@ -4,6 +4,6 @@ Feature: Quotes Feature
     And Sujon clicks on "START BREATHING EXERCISE"
     And Sujon start exercising and close it
     And Sujon goes to first image
-    When Sujon enters and he goes to third image
-#    And Sujon slides 3 time next image and one before image
-#    Then Sujon save copy and share
+    When Sujon enters and he goes to next image
+    And Sujon slides 1 times before image
+    Then Sujon save copy and share

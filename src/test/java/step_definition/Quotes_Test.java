@@ -22,10 +22,11 @@ public class Quotes_Test {
     @And("^Sujon clicks on \"([^\"]*)\"$")
     public void test_step_2(String text) throws InterruptedException{
 
+
         if(text.equals(btn1)) {
             quotespage.SBE();
         }
-        Thread.sleep(3000);
+
     }
     @And("^Sujon start exercising and close it$")
     public void test_step_3(){

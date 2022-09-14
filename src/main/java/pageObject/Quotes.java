@@ -40,11 +40,9 @@ public class Quotes extends Common {
     }
     //scroll down and click SBE btn
     public void SBE() throws InterruptedException {
-        verticalScroll(scroll,100);
-        Thread.sleep(1000);
-        verticalScroll(scroll,100);
-        quotesTqo.get(0).click();
 
+        androidScrollToAnElementByText(btn1);
+       quotesTqo.get(0).click();
     }
     //Sujon enter SBE and waits for some time then close it
      public void exercise(){

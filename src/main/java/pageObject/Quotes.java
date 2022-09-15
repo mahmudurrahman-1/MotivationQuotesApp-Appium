@@ -57,6 +57,7 @@ public class Quotes extends Common {
         button.get(3).click();
 
     }
+    //Sujon Slides Images
     public void imageSlidebefore(){
         button.get(2).click();
 

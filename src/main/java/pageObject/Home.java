@@ -22,12 +22,12 @@ public class Home extends Common {
     @FindBy(className = "android.widget.Button")
     List<WebElement> button;
 
-
     //Strings
     String scrollCategory = "android.widget.ScrollView";
     String horizontalContainer ="android.widget.HorizontalScrollView";
     String textNature = "Nature";
     String textSelfLove = "Self Love";
+
 
     /***********
      * Actions
@@ -80,9 +80,7 @@ public class Home extends Common {
     }
     // like save and download
     public void finaOperation() throws InterruptedException{
-        String likebtn = "Like";
-        String savebtn="Save";
-        String dload ="Download";
+
        System.out.println(button.size());
         button.get(6).click();
       Thread.sleep(3000);

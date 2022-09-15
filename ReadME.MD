@@ -47,8 +47,4 @@
 Feel free to choose the framework with page object modal design pattern, that suits you best, along with the
 Java or other programming language as you preferred.
 
-### Record a video of tests execution:
-
-Record a video to show how your tests are interacting with the mobile app(In Emulator). Attach the video as part of your
-solution.
 

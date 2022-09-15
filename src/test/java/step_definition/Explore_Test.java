@@ -7,6 +7,9 @@ import io.cucumber.java.en.When;
 import pageObject.Home;
 
 public class Explore_Test {
+    /*****************
+     * Instances
+     */
     Home homePage=new Home();
     String textMotive ="Motivational Quotes";
     String textExplore="Explore";
@@ -15,6 +18,10 @@ public class Explore_Test {
     String likebtn = "Like";
     String savebtn="Save";
     String dload ="Download";
+    /*****************
+     * Test Steps
+     */
+    //opens app
     @Given("^Sultan on home page after opening \"([^\"]*)\" mobile app$")
     public void OpenHomePage(String text) throws InterruptedException{
         if(text.equals(textMotive)) {
@@ -40,6 +47,7 @@ public class Explore_Test {
         }
 
     }
+    //find image quotes
     @And("^Sultan goes \"([^\"]*)\" image$")
     public void findQuotes(String text) throws InterruptedException{
         Thread.sleep(3000);
@@ -47,6 +55,7 @@ public class Explore_Test {
             homePage.findNothingQuotes();
         }
     }
+    //save and download
     @Then("^Sultan click \"([^\"]*)\" icon, \"([^\"]*)\" button , and click \"([^\"]*)\"$")
     public void Finished(String like,String save,String download) throws InterruptedException{
         if(like.equals(likebtn) && save.equals(savebtn) && download.equals(dload)){

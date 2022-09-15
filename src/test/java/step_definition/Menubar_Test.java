@@ -18,6 +18,7 @@ public class Menubar_Test {
     /***************
      * Test steps
      */
+    //opens app
     @Given("^Sujon opens the application$")
     public void test_step_1() throws InterruptedException{
         homePage.firstSkip();
@@ -26,16 +27,19 @@ public class Menubar_Test {
         menuPage.selectMenu();
 
     }
+    // selects mom headline
     @And("^Sujon finds selects \"([^\"]*)\"$")
     public void test_step_2(String text){
         if (text.equals(textMom)) {
             menuPage.selectsMom();
         }
     }
+    //selects second image inside mom
     @When("^Sujon selects second image$")
     public void test_step_3() throws InterruptedException{
             menuPage.selectSecondImage();
     }
+    //downloads
     @Then("^Sujon downloads it$")
     public void test_step_4(){
             menuPage.download();

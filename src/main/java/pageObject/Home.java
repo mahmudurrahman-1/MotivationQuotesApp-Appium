@@ -24,7 +24,7 @@ public class Home extends Common {
 
     //Strings
     String scrollCategory = "android.widget.ScrollView";
-    String horizontalContainer ="android.widget.HorizontalScrollView";
+    String horizontalContainer = "android.widget.HorizontalScrollView";
     String textNature = "Nature";
     String textSelfLove = "Self Love";
 
@@ -48,43 +48,48 @@ public class Home extends Common {
 
         button.get(0).click();
     }
+
     //selects selfLove
     public void selectSelfLove() {
 
-        androidHorizontalScrollToTextByclassName(horizontalContainer,textSelfLove);
+        androidHorizontalScrollToTextByclassName(horizontalContainer, textSelfLove);
     }
+
     //Explore self-love
     public void exploreSelfLove() throws InterruptedException {
         Thread.sleep(5000);
         button.get(0).click();
-       androidScrollToAnElementByText("+630");
-       Thread.sleep(5000);
+        androidScrollToAnElementByText("+630");
+        Thread.sleep(5000);
     }
+
     //download img
-    public void downLoadSelfLuvImg(){
+    public void downLoadSelfLuvImg() {
         button.get(0).click();
     }
 
     //exploring natures
     public void exploreNatures() {
-        androidVerticalScrollToTextByclassName(scrollCategory,textNature);
+        androidVerticalScrollToTextByclassName(scrollCategory, textNature);
 
     }
+
     // find img quotes by text
-    public void findNothingQuotes() throws InterruptedException{
+    public void findNothingQuotes() throws InterruptedException {
         Thread.sleep(3000);
 
         button.get(0).click();
 
         androidScrollToAnElementByText("+13.8k");
     }
-    // like save and download
-    public void finaOperation() throws InterruptedException{
 
-       System.out.println(button.size());
+    // like save and download
+    public void finaOperation() throws InterruptedException {
+
+        System.out.println(button.size());
         button.get(6).click();
-      Thread.sleep(3000);
-      button.get(7).click();
+        Thread.sleep(3000);
+        button.get(7).click();
         Thread.sleep(3000);
         button.get(8).click();
 

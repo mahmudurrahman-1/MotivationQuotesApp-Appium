@@ -10,21 +10,22 @@ public class Explore_Test {
     /*****************
      * Instances
      */
-    Home homePage=new Home();
-    String textMotive ="Motivational Quotes";
-    String textExplore="Explore";
-    String textNature="Nature";
-    String textImgQuotes ="Nothing Better....";
+    Home homePage = new Home();
+    String textMotive = "Motivational Quotes";
+    String textExplore = "Explore";
+    String textNature = "Nature";
+    String textImgQuotes = "Nothing Better....";
     String likebtn = "Like";
-    String savebtn="Save";
-    String dload ="Download";
+    String savebtn = "Save";
+    String dload = "Download";
+
     /*****************
      * Test Steps
      */
     //opens app
     @Given("^Sultan on home page after opening \"([^\"]*)\" mobile app$")
-    public void OpenHomePage(String text) throws InterruptedException{
-        if(text.equals(textMotive)) {
+    public void OpenHomePage(String text) throws InterruptedException {
+        if (text.equals(textMotive)) {
             homePage.firstSkip();
             homePage.secondSkip();
             Thread.sleep(1000);
@@ -33,32 +34,35 @@ public class Explore_Test {
 
     //selects explore
     @When("^Sultan click \"([^\"]*)\" from top list from home page$")
-    public void GotoExplore(String text){
+    public void GotoExplore(String text) {
         if (text.equals(textExplore)) {
             homePage.selectExplore();
-        }    }
+        }
+    }
 
     //select nature
     @And("^Sultan click to \"([^\"]*)\" from categories$")
-    public void findNature(String text) throws InterruptedException{
+    public void findNature(String text) throws InterruptedException {
         Thread.sleep(3000);
-        if(text.equals(textNature)) {
+        if (text.equals(textNature)) {
             homePage.exploreNatures();
         }
 
     }
+
     //find image quotes
     @And("^Sultan goes \"([^\"]*)\" image$")
-    public void findQuotes(String text) throws InterruptedException{
+    public void findQuotes(String text) throws InterruptedException {
         Thread.sleep(3000);
-        if (text.equals(textImgQuotes)){
+        if (text.equals(textImgQuotes)) {
             homePage.findNothingQuotes();
         }
     }
+
     //save and download
     @Then("^Sultan click \"([^\"]*)\" icon, \"([^\"]*)\" button , and click \"([^\"]*)\"$")
-    public void Finished(String like,String save,String download) throws InterruptedException{
-        if(like.equals(likebtn) && save.equals(savebtn) && download.equals(dload)){
+    public void Finished(String like, String save, String download) throws InterruptedException {
+        if (like.equals(likebtn) && save.equals(savebtn) && download.equals(dload)) {
             homePage.finaOperation();
         }
     }

@@ -33,7 +33,6 @@
 > **_When:_** Sujon selects second image    
 > **_Then:_** Sujon downloads it
 
-
 ### Additional functionalities, that may be covered:
 
 1. The more, the better. Insert additional tests if you feel you

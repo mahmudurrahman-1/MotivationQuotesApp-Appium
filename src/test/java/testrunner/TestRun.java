@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
         //It includes implementation of feature files and divers
         glue = "step_definition",
         //Report Generator
-        plugin={"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+        plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "timeline:test-output-thread/", "rerun:target/failedrerun.txt"}
 )
 //Runs tests

@@ -1,4 +1,5 @@
 Feature: Menubar Feature
+
   Scenario: Validation of manubar
     Given Sujon opens the application
     And Sujon finds selects "Mom always says..."

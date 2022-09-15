@@ -10,9 +10,10 @@ import utilities.Common;
 import java.util.List;
 
 public class Quotes extends Common {
-    public Quotes(){
-        PageFactory.initElements(PageDriver.getCurrentDriver(),this);
+    public Quotes() {
+        PageFactory.initElements(PageDriver.getCurrentDriver(), this);
     }
+
     /******************
      * Locators
      */
@@ -24,18 +25,19 @@ public class Quotes extends Common {
     String btn1 = "START BREATHING EXERCISE";
     @FindBy(className = "android.view.ViewGroup")
     List<WebElement> button;
-    String txt="Alone";
-    String textSituation ="+1.2k";
+    String txt = "Alone";
+    String textSituation = "+1.2k";
 
     /****************
      * Actions
      */
     //select quotes feature
-    public void openAppQuotes(){
+    public void openAppQuotes() {
 
         quotesTqo.get(11).click();
 
     }
+
     //scroll down and click SBE btn
     public void SBE() throws InterruptedException {
         Thread.sleep(15000);
@@ -44,21 +46,25 @@ public class Quotes extends Common {
         Thread.sleep(10000);
 
     }
+
     //Sujon enter SBE and waits for some time then close it
-     public void exercise(){
+    public void exercise() {
         button.get(12).click();
-     }
-     //Sujon selects Be Yourself from trending topics
-    public void beYourself(){
+    }
+
+    //Sujon selects Be Yourself from trending topics
+    public void beYourself() {
         androidScrollToAnElementByText(textSituation);
     }
+
     //Sujon enters the image container and start sliding
-    public void imageSlideafter(){
+    public void imageSlideafter() {
         button.get(3).click();
 
     }
+
     //Sujon Slides Images
-    public void imageSlidebefore(){
+    public void imageSlidebefore() {
         button.get(2).click();
 
     }

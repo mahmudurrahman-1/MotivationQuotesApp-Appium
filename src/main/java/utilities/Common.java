@@ -36,7 +36,7 @@ public class Common {
      * @param duration
      */
     //This method scrolls from top to bottom
-    public void verticalScroll(WebElement element,int duration) {
+    public void verticalScroll(WebElement element, int duration) {
         //Creating Vertical Scroll Event
         //Scrollable Element
 
@@ -63,6 +63,7 @@ public class Common {
         PageDriver.getCurrentDriver().perform(Arrays.asList(swipe));
 
     }
+
     /**********************
      * Method---------2 TouchAction Scrolling top bottom
      */
@@ -87,6 +88,7 @@ public class Common {
             throw new NoSuchElementException("No element " + e);
         }
     }
+
     //without instance
     public void androidScrollByText(String text) {
         try {
@@ -97,6 +99,7 @@ public class Common {
             throw new NoSuchElementException("No element " + e);
         }
     }
+
     /***************************************
      * *************************************
      * This method-----4 stands for scrolling top bottom
@@ -104,11 +107,11 @@ public class Common {
      * @param text
      * Store webelement(must be scrollable and text as a string----call the method passing arguements those are stored in the variable
      */
-    public void androidVerticalScrollToTextById(String id,String text) {
+    public void androidVerticalScrollToTextById(String id, String text) {
         try {
             (PageDriver.getCurrentDriver()).findElement(
                     MobileBy.AndroidUIAutomator(
-                            "new UiScrollable(new UiSelector().scrollable(true)." + "resourceId(\""+ id +"\"))" + ".scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))")).click();
+                            "new UiScrollable(new UiSelector().scrollable(true)." + "resourceId(\"" + id + "\"))" + ".scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))")).click();
         } catch (Exception e) {
             throw new NoSuchElementException("No element" + e);
         }
@@ -118,7 +121,7 @@ public class Common {
      * *************************************
      * This method-----Forward Scroll
      */
-    public void androidScrollForward(){
+    public void androidScrollForward() {
         try {
             PageDriver.getCurrentDriver().findElement(MobileBy.AndroidUIAutomator(
                     "new UiScrollable(new UiSelector().scrollable(true)).scrollForward()"));
@@ -126,6 +129,7 @@ public class Common {
             // ignore
         }
     }
+
     /***************************************
      * *************************************
      * This method-----Scroll by class name
@@ -133,15 +137,16 @@ public class Common {
      * @param text
      * (must be scrollable and text as a string----call the method passing arguements those are stored in the variable
      */
-    public void androidVerticalScrollToTextByclassName(String className,String text){
+    public void androidVerticalScrollToTextByclassName(String className, String text) {
         try {
             (PageDriver.getCurrentDriver()).findElement(
                     MobileBy.AndroidUIAutomator(
-                            "new UiScrollable(new UiSelector().scrollable(true)." + "className(\""+ className +"\").instance(1))" + ".scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))")).click();
+                            "new UiScrollable(new UiSelector().scrollable(true)." + "className(\"" + className + "\").instance(1))" + ".scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))")).click();
         } catch (Exception e) {
             throw new NoSuchElementException("No element" + e);
         }
     }
+
     /***************************************
      * *************************************
      * This method-----1 stands for left right scrolling
@@ -149,8 +154,8 @@ public class Common {
      * @param duration
      */
     //This method scrolls from left to right
-    public void horizontalScroll(WebElement element,int duration) {
-        int centerY = element.getRect().y + (element.getSize().height/2 );
+    public void horizontalScroll(WebElement element, int duration) {
+        int centerY = element.getRect().y + (element.getSize().height / 2);
 
         double startX = element.getRect().x + (element.getSize().width * .8);
 
@@ -187,23 +192,23 @@ public class Common {
      * @param text
      * Store webelement(must be scrollable and text as a string----call the method passing arguements those are stored in the variable
      */
-    public void androidHorizontalScrollByText(String id,String text) {
+    public void androidHorizontalScrollByText(String id, String text) {
         try {
             (PageDriver.getCurrentDriver()).findElement(
                     MobileBy.AndroidUIAutomator(
                             "new UiScrollable(new UiSelector().scrollable(true)."
-                    + "resourceId(\""+id+"\"))" + ".setAsHorizontalList().scrollIntoView(new UiSelector().text(\""+text+"\"))")).click(); }
-        catch (Exception e) {
+                                    + "resourceId(\"" + id + "\"))" + ".setAsHorizontalList().scrollIntoView(new UiSelector().text(\"" + text + "\"))")).click();
+        } catch (Exception e) {
             throw new NoSuchElementException("No element" + e);
         }
     }
 
-    public void androidHorizontalScrollToTextByclassName(String className,String text){
+    public void androidHorizontalScrollToTextByclassName(String className, String text) {
         try {
             (PageDriver.getCurrentDriver()).findElement(
                     MobileBy.AndroidUIAutomator(
                             "new UiScrollable(new UiSelector().scrollable(true)."
-                    + "className(\""+ className +"\").instance(0))" + ".setAsHorizontalList().scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))")).click();
+                                    + "className(\"" + className + "\").instance(0))" + ".setAsHorizontalList().scrollIntoView(new UiSelector().text(\"" + text + "\").instance(0))")).click();
         } catch (Exception e) {
             throw new NoSuchElementException("No element" + e);
         }

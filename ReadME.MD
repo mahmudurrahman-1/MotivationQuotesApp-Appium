@@ -26,6 +26,13 @@
 > **_When:_** Sujon enters and he goes to next image
 > > **_Then:_** Sujon slides 1 times before image
 
+**Scenario:04** Validation of manubar
+
+> **_Given:_** Sujon opens the application        
+> **_And:_** Sujon finds selects "Mom always says..."            
+> **_When:_** Sujon selects second image    
+> **_Then:_** Sujon downloads it
+
 
 ### Additional functionalities, that may be covered:
 

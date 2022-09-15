@@ -7,10 +7,11 @@ import io.cucumber.testng.CucumberOptions;
         //It includes feature files when test steps are defined
         features = "src/test/java/featuresfiles/thirdScenario.feature",
         //It includes implementation of feature files and divers
-        glue = "step_definition"
-//        plugin={"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-//                "timeline:test-output-thread/", "rerun:target/failedrerun.txt"}
+        glue = "step_definition",
+        //Report Generator
+        plugin={"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "timeline:test-output-thread/", "rerun:target/failedrerun.txt"}
 )
-
+//Runs tests
 public class TestRun extends AbstractTestNGCucumberTests {
 }

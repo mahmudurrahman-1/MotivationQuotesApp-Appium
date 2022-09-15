@@ -26,18 +26,15 @@ public class Quotes extends Common {
     List<WebElement> button;
     String txt="Alone";
     String textSituation ="+1.2k";
-//    @FindBy(className = "")
-//    WebElement ;
-//    @FindBy(className = "")
-//    WebElement ;
 
     /****************
      * Actions
      */
     //select quotes feature
     public void openAppQuotes(){
+
         quotesTqo.get(11).click();
-        System.out.println(quotesTqo.size());
+
     }
     //scroll down and click SBE btn
     public void SBE() throws InterruptedException {
